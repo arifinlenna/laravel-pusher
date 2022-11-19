@@ -28,8 +28,14 @@ window.Echo = new Echo({
     broadcaster: "pusher",
     key: process.env.MIX_PUSHER_APP_KEY,
     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-    wsHost: window.location.hostname,
-    wsPort: 6001,
+    // wsHost: window.location.hostname,
+    // wsPort: 6001,
     forceTLS: false,
-    disableStats: true,
+    // disableStats: true,
+});
+
+var channel = window.Echo.channel("channel-chat");
+channel.listen("sendMessage", function (data) {
+    console.log(JSON.stringify(data));
+    console.log("berhasil");
 });

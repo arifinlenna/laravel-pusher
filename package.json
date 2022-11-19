@@ -26,8 +26,8 @@
         "webpack-dev-server": "^4.11.1"
     },
     "dependencies": {
-        "laravel-echo": "^1.14.0",
-        "pusher-js": "^7.4.0",
+        "laravel-echo": "^1.14.1",
+        "pusher-js": "^7.5.0",
         "vue-loader": "^17.0.0"
     }
 }
